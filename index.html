@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LSHang3r</title>
+  <link rel="icon" href="https://cdn.glitch.global/6f1ed81b-974a-493f-ae10-97db57dc0480/LightSPED-Logo.png?v=1748695706493">
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: "Segoe UI", sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+    }
+    h1 img {
+      width: 40px;
+      margin-right: 0.5rem;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    .ext-card {
+      background-color: #2a2a2a;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .ext-card strong {
+      font-size: 1.2rem;
+    }
+    .ext-card p {
+      margin: 0.25rem 0;
+      color: #aaa;
+    }
+    .disable-btn {
+      margin-top: 0.5rem;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 1.5rem;
+      color: limegreen;
+    }
+    #slider-container {
+      margin-top: 2rem;
+    }
+    #iframeCount {
+      color: #90caf9;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><img src="https://cdn.glitch.global/6f1ed81b-974a-493f-ae10-97db57dc0480/LightSPED-Logo.png?v=1748695706493" alt=""> LSHang3r</h1>
+
+  <h2>Detected Lightspeed Extensions</h2>
+
+  <div class="ext-card">
+    <strong>Lightspeed Filter Agent</strong>
+    <p>ID: adkcpkpghahmbopkjchobieckeoaoeem</p>
+    <button class="disable-btn" onclick="disableExt('adkcpkpghahmbopkjchobieckeoaoeem', 'Lightspeed Filter Agent')">Disable</button>
+  </div>
+
+  <div class="ext-card">
+    <strong>Lightspeed Digital Insight Agent</strong>
+    <p>ID: njdnilcgegjjdcdliklgleicanpmcngj</p>
+    <button class="disable-btn" onclick="disableExt('njdnilcgegjjdcdliklgleicanpmcngj', 'Lightspeed Digital Insight Agent')">Disable</button>
+  </div>
+
+  <div class="ext-card">
+    <strong>Lightspeed Classroom</strong>
+    <p>ID: kkbmdgjggcdajckdlbngdjonpchpaiea</p>
+    <button class="disable-btn" onclick="disableExt('kkbmdgjggcdajckdlbngdjonpchpaiea', 'Lightspeed Classroom')">Disable</button>
+  </div>
+
+  <div id="slider-container">
+    <label for="iframeSlider">Iframe Count: <span id="iframeCount">3500</span></label><br>
+    <input type="range" id="iframeSlider" min="1000" max="30000" step="100" value="3500" />
+  </div>
+
+  <div id="status">Status: Ready.</div>
+
+  <script>
+    const slider = document.getElementById('iframeSlider');
+    const iframeCountDisplay = document.getElementById('iframeCount');
+
+    slider.addEventListener('input', () => {
+      iframeCountDisplay.textContent = slider.value;
+    });
+
+    function disableExt(id, name) {
+      const count = slider.value;
+      const url = `hanger.html?id=${id}&name=${encodeURIComponent(name)}&count=${count}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
