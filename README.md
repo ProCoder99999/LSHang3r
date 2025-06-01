@@ -1,5 +1,5 @@
 # LSHang3r
-This is an exploit that hangs any of the 3 lightspeed extensions.
+LSHang3r (a.k.a Lightspeed Hanger or Lightspeed extensions hanger) is an exploit that hangs any of the 3 lightspeed extensions.
 
 # How to use this exploit
 Prequistes:
