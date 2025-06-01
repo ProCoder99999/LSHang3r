@@ -27,3 +27,11 @@ Links:
 What I might plan on adding:
 1. about:blank cloaking.
 2. the abillity to use on/off switch.
+
+What to do if you encounter any issues:
+1. I have heard that Lightspeed Filter Agent has different extension ids per state, if you have an id, let me know in the issues.
+2. If you have any issues on hanging, let me know what happened in detailed explanations in the issues.
+
+Disclaimer:
+This was only made for experimental purposes, do not do anything illegal with this.
+If you mod my project in any way, clearly credit me in your readme.
