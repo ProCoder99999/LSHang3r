@@ -6,6 +6,7 @@ Prequistes:
 1. Visit your extension page (e.g. chrome://extensions/?id=1234567890) and keep it open. And it should also have "Allow access to file URLs" turned on.
 2. Go to one of the sites mentioned in this repository
 3. Turn off the v8 optimizer (optional, but recommended)
+
 Steps to hang an extension:
 1. When you are reddy, click "Disable" on the extension you wanna hang, this will open a new tab (The Hang3r tab).
 2. The second the new tab opens, press ctrl+tab to go to the extension page.
