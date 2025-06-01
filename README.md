@@ -14,6 +14,16 @@ Steps to hang an extension:
 4. To finish, either close "The Hang3r" tab, or go to "The Hang3r" tab and press cancel.
 5. Profit.
 
-# Credits
+# Credits and other stuff
 
 Credits to @Blobby-Boi and @ading2210 for their exploits (ExtHang3r, LightSPED Killer Agent, ExtPrint3r, and Dextensify) for inspiring me to make this.
+
+Links:
+1. https://lshang3r.glitch.me/
+2. https://lshang3r.pages.dev/
+3. https://lshang3r.playcode.io/
+4. https://lshang3r-14804992.codehs.me/
+
+What I might plan on adding:
+1. about:blank cloaking.
+2. the abillity to use on/off switch.
