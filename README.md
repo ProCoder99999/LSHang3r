@@ -28,7 +28,11 @@ What I might plan on adding:
 1. about:blank cloaking.
 2. the abillity to use on/off switch.
 
-What to do if you encounter any issues:
+What to do if you encounter any issues (troubleshoot):
+1. Extension doesn't get hanged. Try increasing the iframe count from the default for a more powerful hang.
+2. After using, pages take forever to load. If that happens try resetting your computer and try again, but with less iframes for a gentler hang.
+
+What to do if you encounter any issues (if troubleshoot does not work):
 1. I have heard that Lightspeed Filter Agent has different extension ids per state, if you have an id, let me know in the issues.
 2. If you have any issues on hanging, let me know what happened in detailed explanations in the issues.
 
